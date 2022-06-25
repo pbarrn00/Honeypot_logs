@@ -1,0 +1,144 @@
+2022-05-26T00:17:21.492280+0200 [-] Removing stale pidfile /home/cowrie/cowrie/var/run/cowrie.pid
+2022-05-26T00:17:21.494337+0200 [-] Python Version 3.7.3 (default, Jan 22 2021, 20:04:44) [GCC 8.3.0]
+2022-05-26T00:17:21.494601+0200 [-] Twisted Version 22.4.0
+2022-05-26T00:17:21.494720+0200 [-] Cowrie Version 2.3.0
+2022-05-26T00:17:21.510005+0200 [-] Loaded output engine: jsonlog
+2022-05-26T00:17:21.524466+0200 [twisted.scripts._twistd_unix.UnixAppLogger#info] twistd 22.4.0 (/home/cowrie/cowrie/cowrie-env/bin/python3 3.7.3) starting up.
+2022-05-26T00:17:21.526279+0200 [twisted.scripts._twistd_unix.UnixAppLogger#info] reactor class: twisted.internet.epollreactor.EPollReactor.
+2022-05-26T00:17:21.573848+0200 [-] CowrieSSHFactory starting on 2222
+2022-05-26T00:17:21.580379+0200 [cowrie.ssh.factory.CowrieSSHFactory#info] Starting factory <cowrie.ssh.factory.CowrieSSHFactory object at 0x7facb7d9b0>
+2022-05-26T00:17:21.732074+0200 [-] Ready to accept SSH connections
+2022-05-26T00:17:21.738308+0200 [-] HoneyPotTelnetFactory starting on 2223
+2022-05-26T00:17:21.739700+0200 [cowrie.telnet.factory.HoneyPotTelnetFactory#info] Starting factory <cowrie.telnet.factory.HoneyPotTelnetFactory object at 0x7facb7dac8>
+2022-05-26T00:17:21.744188+0200 [-] Ready to accept Telnet connections
+2022-05-26T00:24:22.077379+0200 [cowrie.ssh.factory.CowrieSSHFactory] New connection: 192.168.0.1:21390 (192.168.15.130:2222) [session: 97204305a0b2]
+2022-05-26T00:24:22.096014+0200 [HoneyPotSSHTransport,0,192.168.0.1] Remote SSH version: SSH-2.0-OpenSSH_for_Windows_8.1
+2022-05-26T00:24:22.115156+0200 [HoneyPotSSHTransport,0,192.168.0.1] SSH client hassh fingerprint: ec7378c1a92f5a8dde7e8b7a1ddf33d1
+2022-05-26T00:24:22.150736+0200 [cowrie.ssh.transport.HoneyPotSSHTransport#debug] kex alg=b'curve25519-sha256' key alg=b'ecdsa-sha2-nistp256'
+2022-05-26T00:24:22.152445+0200 [cowrie.ssh.transport.HoneyPotSSHTransport#debug] outgoing: b'aes128-ctr' b'hmac-sha2-512' b'none'
+2022-05-26T00:24:22.176157+0200 [cowrie.ssh.transport.HoneyPotSSHTransport#debug] incoming: b'aes128-ctr' b'hmac-sha2-512' b'none'
+2022-05-26T00:24:22.299401+0200 [cowrie.ssh.transport.HoneyPotSSHTransport#debug] NEW KEYS
+2022-05-26T00:24:22.303953+0200 [cowrie.ssh.transport.HoneyPotSSHTransport#debug] starting service b'ssh-userauth'
+2022-05-26T00:24:22.308958+0200 [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'pi' trying auth b'none'
+2022-05-26T00:24:22.315806+0200 [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'pi' trying auth b'publickey'
+2022-05-26T00:24:22.321210+0200 [HoneyPotSSHTransport,0,192.168.0.1] public key attempt for user b'pi' of type b'ssh-rsa' with fingerprint 4e:e0:2e:6a:6f:c2:9d:93:98:e4:c8:62:94:a0:8c:05
+2022-05-26T00:24:22.329891+0200 [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'pi' failed auth b'publickey'
+2022-05-26T00:24:22.331472+0200 [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] reason: ('Incorrect signature', None)
+2022-05-26T00:24:30.228776+0200 [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'pi' trying auth b'password'
+2022-05-26T00:24:30.237938+0200 [HoneyPotSSHTransport,0,192.168.0.1] login attempt [b'pi'/b'isaias'] succeeded
+2022-05-26T00:24:30.249245+0200 [HoneyPotSSHTransport,0,192.168.0.1] Initialized emulated server as architecture: linux-x64-lsb
+2022-05-26T00:24:30.258948+0200 [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'pi' authenticated with b'password'
+2022-05-26T00:24:30.262351+0200 [cowrie.ssh.transport.HoneyPotSSHTransport#debug] starting service b'ssh-connection'
+2022-05-26T00:24:30.269596+0200 [cowrie.ssh.connection.CowrieSSHConnection#debug] got channel b'session' request
+2022-05-26T00:24:30.272030+0200 [cowrie.ssh.session.HoneyPotSSHSession#info] channel open
+2022-05-26T00:24:30.273451+0200 [cowrie.ssh.connection.CowrieSSHConnection#debug] got global b'no-more-sessions@openssh.com' request
+2022-05-26T00:24:30.593169+0200 [twisted.conch.ssh.session#info] Handling pty request: b'xterm-256color' (28, 120, 640, 480)
+2022-05-26T00:24:30.594481+0200 [SSHChannel session (0) on SSHService b'ssh-connection' on HoneyPotSSHTransport,0,192.168.0.1] Terminal Size: 120 28
+2022-05-26T00:24:30.601505+0200 [twisted.conch.ssh.session#info] Getting shell
+2022-05-26T00:24:36.451764+0200 [HoneyPotSSHTransport,0,192.168.0.1] CMD: exit
+2022-05-26T00:24:36.460527+0200 [HoneyPotSSHTransport,0,192.168.0.1] Command found: exit 
+2022-05-26T00:24:36.465635+0200 [twisted.conch.ssh.session#info] exitCode: 0
+2022-05-26T00:24:36.467903+0200 [cowrie.ssh.connection.CowrieSSHConnection#debug] sending request b'exit-status'
+2022-05-26T00:24:36.473147+0200 [HoneyPotSSHTransport,0,192.168.0.1] Closing TTY Log: var/lib/cowrie/tty/2638f1c1c2018567a46a4cae049dd90db2d468e1538d60d328f2707d071f73c5 after 5 seconds
+2022-05-26T00:24:36.486885+0200 [cowrie.ssh.connection.CowrieSSHConnection#info] sending close 0
+2022-05-26T00:24:36.493029+0200 [cowrie.ssh.session.HoneyPotSSHSession#info] remote close
+2022-05-26T00:24:36.495821+0200 [HoneyPotSSHTransport,0,192.168.0.1] Got remote error, code 11 reason: b'disconnected by user'
+2022-05-26T00:24:36.498836+0200 [HoneyPotSSHTransport,0,192.168.0.1] avatar pi logging out
+2022-05-26T00:24:36.500761+0200 [cowrie.ssh.transport.HoneyPotSSHTransport#info] connection lost
+2022-05-26T00:24:36.502460+0200 [HoneyPotSSHTransport,0,192.168.0.1] Connection lost after 14 seconds
+2022-05-26T00:25:01.774045+0200 [cowrie.telnet.factory.HoneyPotTelnetFactory] New connection: 211.223.62.169:63312 (192.168.15.130:2223) [session: c18e2d242508]
+2022-05-26T00:25:32.184081+0200 [CowrieTelnetTransport,0,211.223.62.169] Connection lost after 30 seconds
+2022-05-26T00:25:45.345179+0200 [cowrie.ssh.factory.CowrieSSHFactory] New connection: 192.168.0.1:13327 (192.168.15.130:2222) [session: 1dd6d19c6b74]
+2022-05-26T00:25:45.363506+0200 [HoneyPotSSHTransport,1,192.168.0.1] Remote SSH version: SSH-2.0-OpenSSH_for_Windows_8.1
+2022-05-26T00:25:45.380804+0200 [HoneyPotSSHTransport,1,192.168.0.1] SSH client hassh fingerprint: ec7378c1a92f5a8dde7e8b7a1ddf33d1
+2022-05-26T00:25:45.403704+0200 [cowrie.ssh.transport.HoneyPotSSHTransport#debug] kex alg=b'curve25519-sha256' key alg=b'ecdsa-sha2-nistp256'
+2022-05-26T00:25:45.405760+0200 [cowrie.ssh.transport.HoneyPotSSHTransport#debug] outgoing: b'aes128-ctr' b'hmac-sha2-512' b'none'
+2022-05-26T00:25:45.408053+0200 [cowrie.ssh.transport.HoneyPotSSHTransport#debug] incoming: b'aes128-ctr' b'hmac-sha2-512' b'none'
+2022-05-26T00:25:45.449625+0200 [cowrie.ssh.transport.HoneyPotSSHTransport#debug] NEW KEYS
+2022-05-26T00:25:45.453160+0200 [cowrie.ssh.transport.HoneyPotSSHTransport#debug] starting service b'ssh-userauth'
+2022-05-26T00:25:45.457744+0200 [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'pi' trying auth b'none'
+2022-05-26T00:25:45.462499+0200 [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'pi' trying auth b'publickey'
+2022-05-26T00:25:45.465640+0200 [HoneyPotSSHTransport,1,192.168.0.1] public key attempt for user b'pi' of type b'ssh-rsa' with fingerprint 4e:e0:2e:6a:6f:c2:9d:93:98:e4:c8:62:94:a0:8c:05
+2022-05-26T00:25:45.473785+0200 [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'pi' failed auth b'publickey'
+2022-05-26T00:25:45.475100+0200 [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] reason: ('Incorrect signature', None)
+2022-05-26T00:25:53.737142+0200 [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'pi' trying auth b'password'
+2022-05-26T00:25:53.741140+0200 [HoneyPotSSHTransport,1,192.168.0.1] login attempt [b'pi'/b'asd'] succeeded
+2022-05-26T00:25:53.749133+0200 [HoneyPotSSHTransport,1,192.168.0.1] Initialized emulated server as architecture: linux-x64-lsb
+2022-05-26T00:25:53.754575+0200 [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'pi' authenticated with b'password'
+2022-05-26T00:25:53.757164+0200 [cowrie.ssh.transport.HoneyPotSSHTransport#debug] starting service b'ssh-connection'
+2022-05-26T00:25:53.763753+0200 [cowrie.ssh.connection.CowrieSSHConnection#debug] got channel b'session' request
+2022-05-26T00:25:53.766577+0200 [cowrie.ssh.session.HoneyPotSSHSession#info] channel open
+2022-05-26T00:25:53.769206+0200 [cowrie.ssh.connection.CowrieSSHConnection#debug] got global b'no-more-sessions@openssh.com' request
+2022-05-26T00:25:54.402691+0200 [twisted.conch.ssh.session#info] Handling pty request: b'xterm-256color' (28, 120, 640, 480)
+2022-05-26T00:25:54.404127+0200 [SSHChannel session (0) on SSHService b'ssh-connection' on HoneyPotSSHTransport,1,192.168.0.1] Terminal Size: 120 28
+2022-05-26T00:25:54.411214+0200 [twisted.conch.ssh.session#info] Getting shell
+2022-05-26T00:25:57.201886+0200 [HoneyPotSSHTransport,1,192.168.0.1] CMD: asd
+2022-05-26T00:25:57.210490+0200 [HoneyPotSSHTransport,1,192.168.0.1] Can't find command asd
+2022-05-26T00:25:57.211580+0200 [HoneyPotSSHTransport,1,192.168.0.1] Command not found: asd
+2022-05-26T00:27:39.354431+0200 [cowrie.telnet.factory.HoneyPotTelnetFactory] New connection: 210.95.128.114:53814 (192.168.15.130:2223) [session: 9a5dd562ce50]
+2022-05-26T00:28:09.826482+0200 [CowrieTelnetTransport,1,210.95.128.114] Connection lost after 30 seconds
+2022-05-26T00:28:53.798814+0200 [-] Timeout reached in HoneyPotSSHTransport
+2022-05-26T00:28:53.804279+0200 [HoneyPotSSHTransport,1,192.168.0.1] Closing TTY Log: var/lib/cowrie/tty/d22b96d34929442f27e8e8b2d2328bcac7216efe025915180436fb07da6eaa99 after 179 seconds
+2022-05-26T00:28:53.815283+0200 [HoneyPotSSHTransport,1,192.168.0.1] avatar pi logging out
+2022-05-26T00:28:53.816441+0200 [cowrie.ssh.transport.HoneyPotSSHTransport#info] connection lost
+2022-05-26T00:28:53.817304+0200 [HoneyPotSSHTransport,1,192.168.0.1] Connection lost after 188 seconds
+2022-05-26T00:33:26.592657+0200 [cowrie.telnet.factory.HoneyPotTelnetFactory] New connection: 209.216.177.158:53924 (192.168.15.130:2223) [session: a3364bd0356b]
+2022-05-26T00:33:57.619169+0200 [CowrieTelnetTransport,2,209.216.177.158] Connection lost after 31 seconds
+2022-05-26T00:38:50.579260+0200 [cowrie.ssh.factory.CowrieSSHFactory] New connection: 45.125.65.126:48514 (192.168.15.130:2222) [session: 8263f158ccc6]
+2022-05-26T00:38:50.666334+0200 [cowrie.ssh.transport.HoneyPotSSHTransport#info] connection lost
+2022-05-26T00:38:50.667695+0200 [HoneyPotSSHTransport,2,45.125.65.126] Connection lost after 0 seconds
+2022-05-26T00:38:55.082232+0200 [cowrie.ssh.factory.CowrieSSHFactory] New connection: 89.248.163.173:59890 (192.168.15.130:2222) [session: 58204d0d306e]
+2022-05-26T00:38:55.151870+0200 [HoneyPotSSHTransport,3,89.248.163.173] Remote SSH version: GET / HTTP/1.1
+2022-05-26T00:38:55.157336+0200 [HoneyPotSSHTransport,3,89.248.163.173] Bad protocol version identification: b'GET / HTTP/1.1'
+2022-05-26T00:38:55.160175+0200 [cowrie.ssh.transport.HoneyPotSSHTransport#info] connection lost
+2022-05-26T00:38:55.161383+0200 [HoneyPotSSHTransport,3,89.248.163.173] Connection lost after 0 seconds
+2022-05-26T00:39:08.680507+0200 [cowrie.telnet.factory.HoneyPotTelnetFactory] New connection: 36.255.135.62:37251 (192.168.15.130:2223) [session: dfe145ebcee9]
+2022-05-26T00:39:18.700040+0200 [cowrie.ssh.factory.CowrieSSHFactory] New connection: 45.125.65.126:46338 (192.168.15.130:2222) [session: 33d23bede236]
+2022-05-26T00:39:18.713311+0200 [HoneyPotSSHTransport,4,45.125.65.126] Remote SSH version: SSH-2.0-libssh2_1.4.3
+2022-05-26T00:39:18.793429+0200 [HoneyPotSSHTransport,4,45.125.65.126] SSH client hassh fingerprint: 92674389fa1e47a27ddd8d9b63ecd42b
+2022-05-26T00:39:18.807811+0200 [cowrie.ssh.transport.HoneyPotSSHTransport#debug] kex alg=b'diffie-hellman-group14-sha1' key alg=b'ssh-rsa'
+2022-05-26T00:39:18.809550+0200 [cowrie.ssh.transport.HoneyPotSSHTransport#debug] outgoing: b'aes128-ctr' b'hmac-sha1' b'none'
+2022-05-26T00:39:18.811181+0200 [cowrie.ssh.transport.HoneyPotSSHTransport#debug] incoming: b'aes128-ctr' b'hmac-sha1' b'none'
+2022-05-26T00:39:19.052165+0200 [cowrie.ssh.transport.HoneyPotSSHTransport#debug] NEW KEYS
+2022-05-26T00:39:19.120105+0200 [cowrie.ssh.transport.HoneyPotSSHTransport#debug] starting service b'ssh-userauth'
+2022-05-26T00:39:19.191909+0200 [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'user' trying auth b'password'
+2022-05-26T00:39:19.195287+0200 [HoneyPotSSHTransport,4,45.125.65.126] login attempt [b'user'/b'1'] succeeded
+2022-05-26T00:39:19.202169+0200 [HoneyPotSSHTransport,4,45.125.65.126] Initialized emulated server as architecture: linux-x64-lsb
+2022-05-26T00:39:19.206651+0200 [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'user' authenticated with b'password'
+2022-05-26T00:39:19.208680+0200 [cowrie.ssh.transport.HoneyPotSSHTransport#debug] starting service b'ssh-connection'
+2022-05-26T00:39:19.279081+0200 [cowrie.ssh.connection.CowrieSSHConnection#debug] got channel b'session' request
+2022-05-26T00:39:19.281118+0200 [cowrie.ssh.session.HoneyPotSSHSession#info] channel open
+2022-05-26T00:39:19.975662+0200 [twisted.conch.ssh.session#info] Executing command "b'sudo hive-passwd set se43435g4k334go33g51; sudo hive-passwd 34gg43g43354k34302o51; sudo pkill Xorg; sudo pkill x11vnc; uname -a'"
+2022-05-26T00:39:19.985052+0200 [SSHChannel session (0) on SSHService b'ssh-connection' on HoneyPotSSHTransport,4,45.125.65.126] CMD: sudo hive-passwd set se43435g4k334go33g51; sudo hive-passwd 34gg43g43354k34302o51; sudo pkill Xorg; sudo pkill x11vnc; uname -a
+2022-05-26T00:39:19.996102+0200 [SSHChannel session (0) on SSHService b'ssh-connection' on HoneyPotSSHTransport,4,45.125.65.126] Command found: sudo hive-passwd set se43435g4k334go33g51
+2022-05-26T00:39:20.001802+0200 [SSHChannel session (0) on SSHService b'ssh-connection' on HoneyPotSSHTransport,4,45.125.65.126] Can't find command hive-passwd
+2022-05-26T00:39:20.003808+0200 [SSHChannel session (0) on SSHService b'ssh-connection' on HoneyPotSSHTransport,4,45.125.65.126] Command found: sudo hive-passwd 34gg43g43354k34302o51
+2022-05-26T00:39:20.006516+0200 [SSHChannel session (0) on SSHService b'ssh-connection' on HoneyPotSSHTransport,4,45.125.65.126] Can't find command hive-passwd
+2022-05-26T00:39:20.009244+0200 [SSHChannel session (0) on SSHService b'ssh-connection' on HoneyPotSSHTransport,4,45.125.65.126] Can't find command 34gg43g43354k34302o51
+2022-05-26T00:39:20.014614+0200 [SSHChannel session (0) on SSHService b'ssh-connection' on HoneyPotSSHTransport,4,45.125.65.126] Command found: sudo pkill Xorg
+2022-05-26T00:39:20.022940+0200 [SSHChannel session (0) on SSHService b'ssh-connection' on HoneyPotSSHTransport,4,45.125.65.126] Command found: sudo pkill x11vnc
+2022-05-26T00:39:20.030280+0200 [SSHChannel session (0) on SSHService b'ssh-connection' on HoneyPotSSHTransport,4,45.125.65.126] Command found: uname -a
+2022-05-26T00:39:20.035117+0200 [twisted.conch.ssh.session#info] exitCode: 0
+2022-05-26T00:39:20.036680+0200 [cowrie.ssh.connection.CowrieSSHConnection#debug] sending request b'exit-status'
+2022-05-26T00:39:20.039051+0200 [cowrie.ssh.connection.CowrieSSHConnection#info] sending close 0
+2022-05-26T00:39:20.144371+0200 [HoneyPotSSHTransport,4,45.125.65.126] Got remote error, code 11 reason: b'Normal Shutdown, Thank you for playing'
+2022-05-26T00:39:20.146421+0200 [twisted.conch.ssh.session#info] exitCode: 0
+2022-05-26T00:39:20.149745+0200 [HoneyPotSSHTransport,4,45.125.65.126] Closing TTY Log: var/lib/cowrie/tty/ce170dea15b683c682ec2c350fe7d16371a5d2ec530d21fac8ca22069c8aae09 after 0 seconds
+2022-05-26T00:39:20.157042+0200 [cowrie.ssh.session.HoneyPotSSHSession#info] remote close
+2022-05-26T00:39:20.159593+0200 [HoneyPotSSHTransport,4,45.125.65.126] avatar user logging out
+2022-05-26T00:39:20.160761+0200 [cowrie.ssh.transport.HoneyPotSSHTransport#info] connection lost
+2022-05-26T00:39:20.161424+0200 [HoneyPotSSHTransport,4,45.125.65.126] Connection lost after 1 seconds
+2022-05-26T00:39:39.102690+0200 [cowrie.telnet.factory.HoneyPotTelnetFactory] New connection: 209.16.81.55:56350 (192.168.15.130:2223) [session: 74749f40c16f]
+2022-05-26T00:39:42.424136+0200 [CowrieTelnetTransport,3,36.255.135.62] Connection lost after 33 seconds
+2022-05-26T00:40:18.163538+0200 [CowrieTelnetTransport,4,209.16.81.55] Connection lost after 39 seconds
+2022-05-26T00:41:57.933722+0200 [cowrie.telnet.factory.HoneyPotTelnetFactory] New connection: 182.168.114.234:60870 (192.168.15.130:2223) [session: 28d660903b0a]
+2022-05-26T00:42:29.733710+0200 [CowrieTelnetTransport,5,182.168.114.234] Connection lost after 31 seconds
+2022-05-26T00:44:26.862303+0200 [cowrie.telnet.factory.HoneyPotTelnetFactory] New connection: 121.137.170.38:63995 (192.168.15.130:2223) [session: d19cae8706f8]
+2022-05-26T00:44:58.209699+0200 [CowrieTelnetTransport,6,121.137.170.38] Connection lost after 31 seconds
+2022-05-26T00:50:24.827911+0200 [-] Received SIGTERM, shutting down.
+2022-05-26T00:50:24.839765+0200 [-] (TCP Port 2223 Closed)
+2022-05-26T00:50:24.842019+0200 [cowrie.telnet.factory.HoneyPotTelnetFactory#info] Stopping factory <cowrie.telnet.factory.HoneyPotTelnetFactory object at 0x7facb7dac8>
+2022-05-26T00:50:24.844387+0200 [-] (TCP Port 2222 Closed)
+2022-05-26T00:50:24.846504+0200 [cowrie.ssh.factory.CowrieSSHFactory#info] Stopping factory <cowrie.ssh.factory.CowrieSSHFactory object at 0x7facb7d9b0>
+2022-05-26T00:50:24.850081+0200 [-] Main loop terminated.
+2022-05-26T00:50:24.853976+0200 [twisted.scripts._twistd_unix.UnixAppLogger#info] Server Shut Down.
